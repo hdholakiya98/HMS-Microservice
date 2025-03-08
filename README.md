@@ -1,7 +1,7 @@
 # HMS-Microservice
 
 This project is using a Spring Boot Microservices Architecture. It is designed to be scalable, secure, and cloud-ready, enabling users to manage hotels, user profiles, and ratings efficiently.
-A centralized API Gateway acts as the single entry point for client requests, handling authentication via OKTA Auth and routing traffic to appropriate services. Config Service fetches dynamic configurations from GitHub, ensuring flexible and version-controlled configuration management. The architecture also includes a Service Registry, allowing seamless service discovery and communication with its multi-database design and configurable microservices. 
+A centralized API Gateway acts as the single entry point for client requests, handling authentication via OKTA Auth and routing traffic to appropriate services. Config Service fetches dynamic configurations from GitHub, ensuring flexible and version-controlled configuration management. The architecture also includes a Service Registry, allowing seamless service discovery and communication with its multi-database architecture. Additionally, the entire system is deployed using Kubernetes for enhanced scalability and orchestration.
 
 Architecture:
 ![Architecture](https://github.com/user-attachments/assets/5d3f76e2-3872-41cb-91c6-5c59314911e4)
