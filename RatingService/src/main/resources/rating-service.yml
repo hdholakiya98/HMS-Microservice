@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rating-service-app
+  labels:
+    app: rating-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app : rating-service-app
+  template:
+    metadata:
+      labels:
+        app: rating-service-app
+    spec:
+      containers:
+        - name: rating-service-app
+          image: hdholakiya98/ratingservice-dockerfile:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8083
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name:  rating-service-svc
+spec:
+  selector:
+    app:  rating-service-app
+  ports:
+    - port:  80
+      targetPort:  8083
